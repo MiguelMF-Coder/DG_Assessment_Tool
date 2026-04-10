@@ -1,13 +1,28 @@
 {
-  "nombre": "Logística Ibérica S.A.",
-  "sector": "Logística y transporte",
-  "tamaño": "Grande (4.200 empleados)",
-  "presencia_geografica": "España, Portugal, Marruecos",
-  "nivel_digitalizacion": "Medio-bajo. Procesos core digitalizados pero sin integración entre sistemas.",
-  "sistemas_relevantes": ["SAP ERP", "Salesforce CRM", "Excel operacional", "TMS propietario legacy"],
-  "presion_regulatoria": "Alta. Sujeta a RGPD, normativa de transporte internacional y auditorías de clientes enterprise.",
-  "areas_negocio": ["Operaciones", "Comercial", "Finanzas", "RRHH", "IT", "Atención al cliente"],
-  "contexto_assessment": "La compañía ha iniciado una transformación digital pero carece de una estrategia de dato formal. Los sistemas no están integrados y cada área gestiona sus datos de forma independiente.",
+  "nombre": "Inditex (Industria de Diseño Textil, S.A.)",
+  "sector": "Retail de moda / Comercio omnicanal",
+  "tamaño": "Muy grande — 4.200+ tiendas activas, ~170.000 empleados, presencia en 214 mercados",
+  "presencia_geografica": "Global. Sede en Arteixo (A Coruña, España). Operaciones en Europa, América, Asia y Oriente Medio.",
+  "nivel_digitalizacion": "Alto en operaciones core (RFID, sistema integrado de stock SINT, plataforma omnicanal). Medio-alto en gobierno del dato formal — sin evidencia pública de Data Strategy corporativa explícita.",
+  "sistemas_relevantes": [
+    "RFID (trazabilidad de inventario en tienda)",
+    "SINT (sistema integrado de control de stock)",
+    "Plataforma ecommerce propia",
+    "Sistemas POS en tienda física",
+    "Plataforma de Big Data y Cloud (perfiles internos documentados)",
+    "Sistemas de reporting ESG y cadena de suministro"
+  ],
+  "presion_regulatoria": "Muy alta. RGPD (datos personales y DPO designado), CSRD/ESRS (reporting sostenibilidad desde ejercicio 2024), AI Act UE, normativa de trazabilidad en cadena de suministro.",
+  "areas_negocio": [
+    "Retail y operaciones omnicanal",
+    "Logística y cadena de suministro",
+    "Producto y diseño (multi-enseña: Zara, Pull&Bear, Massimo Dutti, Bershka, Stradivarius, Oysho, Zara Home, Lefties)",
+    "Ecommerce y digital",
+    "Sostenibilidad y ESG",
+    "Finanzas y reporting corporativo",
+    "Privacidad y compliance"
+  ],
+  "contexto_assessment": "Inditex opera un modelo de negocio integrado tienda-online con inventario unificado (RFID/SINT). La complejidad omnicanal, la escala multi-enseña y multi-mercado, y la creciente presión regulatoria (CSRD, AI Act, RGPD) generan necesidades críticas de gobierno del dato que no están cubiertas por una estrategia formal pública. El assessment parte de evidencia pública y supuestos consultivos justificados.",
   "consultor": "Assessment inicial — Proyecto Data Governance 2025",
   "fecha": "Enero 2025"
 }
