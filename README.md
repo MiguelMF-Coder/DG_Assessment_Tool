@@ -53,15 +53,6 @@ streamlit run app.py
 
 Este repositorio cubre todo el flujo anterior en una única aplicación de demostración.
 
-## Uso con datos reales
-
-Sustituye los archivos en la carpeta data por información real de la organización evaluada:
-
-- data/company_profile.json
-- data/maturity_sample.json
-- data/problems_sample.csv
-- data/assessment_notes.json
-
 ## Stack tecnológico
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white) ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-Visualización-3F4F75?logo=plotly&logoColor=white)
