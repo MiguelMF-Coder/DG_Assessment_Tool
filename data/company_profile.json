@@ -1,0 +1,13 @@
+{
+  "nombre": "Logística Ibérica S.A.",
+  "sector": "Logística y transporte",
+  "tamaño": "Grande (4.200 empleados)",
+  "presencia_geografica": "España, Portugal, Marruecos",
+  "nivel_digitalizacion": "Medio-bajo. Procesos core digitalizados pero sin integración entre sistemas.",
+  "sistemas_relevantes": ["SAP ERP", "Salesforce CRM", "Excel operacional", "TMS propietario legacy"],
+  "presion_regulatoria": "Alta. Sujeta a RGPD, normativa de transporte internacional y auditorías de clientes enterprise.",
+  "areas_negocio": ["Operaciones", "Comercial", "Finanzas", "RRHH", "IT", "Atención al cliente"],
+  "contexto_assessment": "La compañía ha iniciado una transformación digital pero carece de una estrategia de dato formal. Los sistemas no están integrados y cada área gestiona sus datos de forma independiente.",
+  "consultor": "Assessment inicial — Proyecto Data Governance 2025",
+  "fecha": "Enero 2025"
+}

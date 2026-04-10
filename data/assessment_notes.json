@@ -1,0 +1,28 @@
+{
+  "notas_clave": [
+    "La organización reconoce el problema pero no tiene mandato claro para resolverlo",
+    "IT está sobrecargado y no puede asumir más responsabilidades sin apoyo organizativo",
+    "El negocio demanda analítica avanzada pero la base de datos no lo permite aún",
+    "Existe voluntad política de avanzar en digitalización — ventana de oportunidad"
+  ],
+  "areas_profundizar": [
+    "Flujos de integración entre SAP y Salesforce",
+    "Procesos de alta y baja de clientes en cada sistema",
+    "Política de accesos y permisos actual",
+    "Nivel real de uso del TMS y datos que genera"
+  ],
+  "quick_wins": [
+    "Definir un responsable del dato por cada área de negocio principal",
+    "Limpiar y deduplicar el maestro de proveedores",
+    "Establecer 3-5 reglas básicas de calidad para datos de clientes",
+    "Crear un inventario básico de fuentes de datos críticas"
+  ],
+  "lineas_actuacion": [
+    "Definición del modelo organizativo de gobierno del dato",
+    "Implantación de Master Data Management para clientes y proveedores",
+    "Construcción de una capa de integración entre sistemas core",
+    "Desarrollo de un cuadro de mando de calidad del dato"
+  ],
+  "dominios_prioritarios": ["Clientes", "Proveedores", "Operaciones", "Finanzas"],
+  "conclusion_general": "La empresa presenta un nivel de madurez bajo-inicial en gobierno del dato. Existe fragmentación severa, ausencia de roles formales y dependencia de procesos manuales. La ventana de oportunidad es real gracias a la voluntad de transformación digital. Se recomienda iniciar con un modelo organizativo básico y quick wins de calidad del dato antes de abordar iniciativas tecnológicas más complejas."
+}

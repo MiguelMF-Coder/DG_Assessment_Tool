@@ -1,0 +1,8 @@
+{
+  "estrategia_dato": {"score": 1, "observacion": "No existe una estrategia del dato documentada ni un responsable claro. Las iniciativas son reactivas y no coordinadas."},
+  "organizacion_roles": {"score": 2, "observacion": "No hay CDO ni roles formales de gobierno del dato. IT asume responsabilidades de forma no estructurada."},
+  "calidad_dato": {"score": 2, "observacion": "Calidad gestionada localmente por cada área. No existen reglas globales ni métricas de calidad formales."},
+  "uso_negocio": {"score": 3, "observacion": "Algunos departamentos usan datos para reporting básico pero sin visión analítica avanzada."},
+  "tecnologia_arquitectura": {"score": 2, "observacion": "Sistemas legacy sin integración. Flujos de datos manuales mediante Excel. Sin data warehouse ni plataforma analítica."},
+  "gobierno_control": {"score": 1, "observacion": "Sin políticas de acceso, linaje ni trazabilidad. No existen mecanismos de control formales sobre el dato."}
+}
