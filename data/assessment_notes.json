@@ -1,31 +1,31 @@
 {
   "notas_clave": [
-    "Inditex tiene una base operacional y tecnológica muy sólida — el gap no es técnico sino de gobierno formal del dato",
-    "La integración omnicanal es el activo diferencial del modelo; cualquier inconsistencia de dato en ese dominio tiene impacto directo en ventas",
-    "La presión regulatoria (CSRD, RGPD, AI Act) actúa como acelerador externo para formalizar el gobierno del dato",
-    "El marco de compliance existente (privacidad, seguridad, canal ético) es un punto de partida sólido para extender el control a datos de negocio",
-    "El assessment distingue entre evidencia pública verificable y supuestos consultivos plausibles justificados en la escala y modelo de negocio"
+    "Inditex combina una base operacional y tecnológica muy sólida con un gap de gobierno formal del dato que se hace visible al cruzar omnicanalidad, ESG y cumplimiento",
+    "La integración omnicanal es el activo diferencial del modelo; cualquier inconsistencia de dato en inventario, pedidos, devoluciones o logística impacta ventas y experiencia de cliente",
+    "La presión regulatoria (CSRD/ESRS, RGPD y AI Act) actúa como acelerador externo para formalizar el gobierno del dato",
+    "El marco de compliance existente (privacidad, seguridad, canal ético y control) es un punto de partida sólido para extender el control a datos de negocio",
+    "El assessment separa evidencia pública verificable de supuestos consultivos plausibles para que el diagnóstico sea defendible"
   ],
   "areas_profundizar": [
     "Flujos de sincronización entre SINT, POS y plataforma ecommerce — latencias y casos de desalineación",
-    "Procesos actuales de alta y modificación de producto maestro entre enseñas y mercados",
+    "Procesos de alta y modificación de producto maestro entre enseñas y mercados",
     "Nivel de sistematización del inventario de tratamientos de datos personales y contratos con terceros",
-    "Herramientas y procesos actuales de consolidación de datos ESG y auditorías de proveedores",
-    "Existencia real de catálogo de datos o glosario corporativo interno"
+    "Herramientas y procesos de consolidación de datos ESG y auditorías de proveedores",
+    "Existencia real de catálogo de datos, glosario corporativo y linaje visible"
   ],
   "quick_wins": [
     "Definir Data Owners por los 4 dominios críticos: Inventario, Producto, Proveedores/ESG y Cliente",
     "Crear un glosario de KPIs omnicanal (disponibilidad, stock, rotación, devoluciones) con definición única aprobada",
     "Piloto de calidad de dato en inventario: reglas básicas y dashboard de discrepancias sobre datos RFID/SINT",
-    "Inventario de tratamientos de datos personales sistematizado y alineado con política de privacidad publicada"
+    "Inventario de tratamientos de datos personales sistematizado y alineado con la política de privacidad publicada"
   ],
   "lineas_actuacion": [
     "Definición del modelo organizativo de gobierno del dato: Data Governance Council + Oficina del Dato",
     "Implantación de Master Data Management para Producto e Inventario",
     "Construcción de catálogo corporativo con linaje para datasets críticos",
     "Pipeline de datos ESG con controles de calidad y auditabilidad para cumplimiento CSRD/ESRS",
-    "Gobernanza de modelos analíticos e IA alineada con AI Act europeo"
+    "Gobernanza de modelos analíticos e IA alineada con el AI Act europeo"
   ],
   "dominios_prioritarios": ["Inventario / Disponibilidad", "Producto Maestro", "Proveedores / ESG", "Cliente / Privacidad"],
-  "conclusion_general": "Inditex presenta un nivel de madurez medio-alto en capacidades operativas y tecnológicas del dato, pero con un gap significativo en gobierno formal: ausencia de roles estructurados, sin estrategia explícita de dato publicada y con riesgos crecientes en ESG, privacidad y escalabilidad analítica. La ventana de oportunidad es clara: la presión regulatoria (CSRD, AI Act) y la ambición omnicanal actúan como mandato externo e interno para formalizar el gobierno del dato. Se recomienda iniciar con la definición de dominios, owners y glosario antes de abordar plataformas o iniciativas tecnológicas más complejas."
+  "conclusion_general": "Inditex presenta un nivel de madurez medio-alto en capacidades operativas y tecnológicas del dato, pero con un gap significativo en gobierno formal: ausencia de roles estructurados, sin estrategia explícita de dato publicada y con riesgos crecientes en ESG, privacidad, accesos e IA. La ventana de oportunidad es clara: la presión regulatoria (CSRD/ESRS, AI Act, RGPD) y la ambición omnicanal actúan como mandato externo e interno para formalizar el gobierno del dato. Se recomienda iniciar con la definición de dominios, owners y glosario antes de abordar plataformas o iniciativas tecnológicas más complejas."
 }

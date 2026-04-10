@@ -1,18 +1,24 @@
 {
   "nombre": "Inditex (Industria de Diseño Textil, S.A.)",
-  "sector": "Retail de moda / Comercio omnicanal",
-  "tamaño": "Muy grande — 4.200+ tiendas activas, ~170.000 empleados, presencia en 214 mercados",
-  "presencia_geografica": "Global. Sede en Arteixo (A Coruña, España). Operaciones en Europa, América, Asia y Oriente Medio.",
-  "nivel_digitalizacion": "Alto en operaciones core (RFID, sistema integrado de stock SINT, plataforma omnicanal). Medio-alto en gobierno del dato formal — sin evidencia pública de Data Strategy corporativa explícita.",
+  "sector": "Retail de moda / Comercio omnicanal integrado",
+  "tamaño": "Muy grande — 5.460 tiendas, ~170.000 empleados y presencia en 214 mercados",
+  "presencia_geografica": "Global. Sede en Arteixo (A Coruña, España). Operación en Europa, América, Asia y Oriente Medio.",
+  "nivel_digitalizacion": "Muy alto en operaciones core (RFID, SINT, arquitectura digital modular y omnicanal). Medio-alto en gobierno formal del dato: no hay evidencia pública de una Data Strategy corporativa explícita.",
+  "ventas_fy2025": "€39,864bn",
+  "ventas_online_fy2025": "€10,7bn",
+  "unidades_comerciales": "5.460 tiendas",
+  "mercados": "214 mercados",
   "sistemas_relevantes": [
     "RFID (trazabilidad de inventario en tienda)",
     "SINT (sistema integrado de control de stock)",
     "Plataforma ecommerce propia",
     "Sistemas POS en tienda física",
+    "Inditex Open Platform (arquitectura abierta y modular)",
     "Plataforma de Big Data y Cloud (perfiles internos documentados)",
-    "Sistemas de reporting ESG y cadena de suministro"
+    "Sistemas de reporting ESG y cadena de suministro",
+    "Sistemas de autorización centralizada y event bus"
   ],
-  "presion_regulatoria": "Muy alta. RGPD (datos personales y DPO designado), CSRD/ESRS (reporting sostenibilidad desde ejercicio 2024), AI Act UE, normativa de trazabilidad en cadena de suministro.",
+  "presion_regulatoria": "Muy alta. RGPD (datos personales y DPO designado), CSRD/ESRS (primera aplicación FY2024 con publicación en 2025), AI Act UE y normativa de trazabilidad en cadena de suministro.",
   "areas_negocio": [
     "Retail y operaciones omnicanal",
     "Logística y cadena de suministro",
@@ -22,7 +28,7 @@
     "Finanzas y reporting corporativo",
     "Privacidad y compliance"
   ],
-  "contexto_assessment": "Inditex opera un modelo de negocio integrado tienda-online con inventario unificado (RFID/SINT). La complejidad omnicanal, la escala multi-enseña y multi-mercado, y la creciente presión regulatoria (CSRD, AI Act, RGPD) generan necesidades críticas de gobierno del dato que no están cubiertas por una estrategia formal pública. El assessment parte de evidencia pública y supuestos consultivos justificados.",
+  "contexto_assessment": "Inditex opera un modelo omnicanal integrado tienda física + online. En FY2025 declara 5.460 tiendas, €39,864bn de ventas, €10,7bn de ventas online y presencia en 214 mercados. La consistencia de producto, inventario, pedidos, devoluciones y logística es crítica para sostener una promesa al cliente fiable en tiempo casi real. La presión regulatoria (CSRD/ESRS, RGPD, AI Act) y la complejidad multi-enseña hacen necesario un gobierno federado del dato.",
   "consultor": "Assessment inicial — Proyecto Data Governance 2025",
   "fecha": "Enero 2025"
 }

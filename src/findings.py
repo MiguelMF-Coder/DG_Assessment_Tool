@@ -24,8 +24,8 @@ def render() -> None:
     problems_df = load_csv(data_path)
 
     st.title("🔍 Hallazgos")
-    st.caption("Registro de hallazgos en bruto levantados en entrevistas y análisis documental.")
-    st.info("Los hallazgos se registran aquí antes de ser priorizados.")
+    st.caption("Hallazgos consolidados del assessment ejecutado en entrevistas y análisis documental.")
+    st.info("Los hallazgos ya están registrados y priorizados como base de diseño de mejoras.")
     st.divider()
 
     if problems_df.empty:

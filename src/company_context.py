@@ -27,6 +27,10 @@ def render() -> None:
         st.write(f"**Presencia geográfica:** {company.get('presencia_geografica', 'N/D')}")
         st.write(f"**Fecha del assessment:** {company.get('fecha', 'N/D')}")
         st.write(f"**Consultor / proyecto:** {company.get('consultor', 'N/D')}")
+        st.write(f"**Tiendas FY2025:** {company.get('unidades_comerciales', 'N/D')}")
+        st.write(f"**Ventas FY2025:** {company.get('ventas_fy2025', 'N/D')}")
+        st.write(f"**Ventas online FY2025:** {company.get('ventas_online_fy2025', 'N/D')}")
+        st.write(f"**Mercados:** {company.get('mercados', 'N/D')}")
 
     with col_right:
         st.write(f"**Nivel de digitalización:** {company.get('nivel_digitalizacion', 'N/D')}")
@@ -42,6 +46,13 @@ def render() -> None:
         st.markdown(code_tags)
     else:
         st.write("Sin información de sistemas relevantes.")
+
+    st.divider()
+
+    st.subheader("Señales de arquitectura y dato")
+    st.markdown("- Integración omnicanal con RFID y SINT como base operativa.")
+    st.markdown("- Arquitectura digital modular con Inditex Open Platform y event bus.")
+    st.markdown("- Capacidades de Big Data, cloud, reporting ESG y control corporativo.")
 
     st.divider()
 

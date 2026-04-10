@@ -2,7 +2,18 @@ import os
 
 import streamlit as st
 
-from src import company_context, diagnostics, exporter, findings, prioritization, recommendations
+from src import (
+    company_context,
+    diagnostics,
+    exporter,
+    findings,
+    prioritization,
+    recommendations,
+    roadmap,
+    steering_committee,
+    strategy,
+    target_model,
+)
 from src.utils import load_json
 
 
@@ -11,16 +22,24 @@ st.set_page_config(page_title="DG Assessment Tool", layout="wide", page_icon="�
 
 def render_home() -> None:
     st.title("🔍 Data Governance Assessment Tool")
-    st.markdown("### Herramienta de diagnóstico inicial para proyectos de gobierno del dato")
+    st.markdown("### Assessment inicial completado de Data Governance — Caso Inditex")
     st.write(
-        "Esta aplicación simula el trabajo de discovery de un consultor de gobierno del dato "
-        "cuando entra por primera vez en una compañía."
+        "Esta aplicación representa el entregable completo de discovery y diagnóstico "
+        "de un consultor de gobierno del dato en su entrada en la compañía."
     )
 
-    st.warning(
-        "Esta herramienta corresponde a la fase de ASSESSMENT INICIAL: diagnóstico, "
-        "descubrimiento y priorización. No representa el modelo objetivo final ni el roadmap definitivo."
+    st.success(
+        "Estado actual: assessment inicial finalizado y consolidado. "
+        "La base está lista para diseñar Modelo Objetivo, Estrategia del Dato y Roadmap."
     )
+
+    st.divider()
+
+    kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+    kpi1.metric("Tiendas FY2025", "5.460")
+    kpi2.metric("Ventas FY2025", "€39,864bn")
+    kpi3.metric("Ventas online FY2025", "€10,7bn")
+    kpi4.metric("Mercados", "214")
 
     st.divider()
 
@@ -30,11 +49,11 @@ def render_home() -> None:
         st.markdown(
             """
             #### ¿Qué cubre este assessment?
-            - Contexto empresarial y presión regulatoria.
-            - Nivel actual de madurez de la gestión del dato.
-            - Hallazgos operativos y organizativos observados.
-            - Priorización de problemas según impacto, urgencia, riesgo y esfuerzo.
-            - Síntesis ejecutiva para preparar la propuesta posterior.
+            - Contexto empresarial y presión regulatoria ya validados.
+            - Nivel actual de madurez de la gestión del dato consolidado.
+            - Hallazgos operativos y organizativos documentados.
+            - Priorización cerrada según impacto, urgencia, riesgo y esfuerzo.
+            - Síntesis ejecutiva preparada para arrancar la fase de propuesta.
             """
         )
 
@@ -43,7 +62,7 @@ def render_home() -> None:
             """
             <div style="background:#f2f6fb;border-left:5px solid #1f4e79;padding:0.85rem 1rem;border-radius:0.4rem;">
                 <b>Resultado esperado</b><br>
-                Una base diagnóstica sólida para diseñar después:
+                Este entregable ya deja preparada la transición hacia:
                 <br>1) Modelo Objetivo<br>
                 2) Estrategia del Dato<br>
                 3) Roadmap de Implantación
@@ -54,14 +73,26 @@ def render_home() -> None:
 
     st.divider()
 
+    st.markdown("#### Estado del trabajo consultivo")
+    st.markdown("- ✅ Contexto y alcance del assessment cerrados")
+    st.markdown("- ✅ Diagnóstico de madurez consolidado")
+    st.markdown("- ✅ Hallazgos y priorización validados")
+    st.markdown("- ✅ Recomendaciones iniciales listas para fase siguiente")
+
+    st.divider()
+
     st.markdown("#### Estructura de secciones")
     section_data = [
         ["🏢 Perfil de Empresa", "Contexto inicial: estructura, sistemas, regulación y alcance del assessment."],
         ["📊 Diagnóstico de Madurez", "Evaluación de 6 dimensiones clave con score global y visualización."],
-        ["🔍 Hallazgos", "Registro de problemas detectados antes de priorizar y definir iniciativas."],
+        ["🔍 Hallazgos", "Registro de problemas detectados y documentados durante el assessment."],
         ["⚖️ Priorización", "Ranking de problemas con fórmula ponderada y matriz visual de decisión."],
         ["📋 Resumen Ejecutivo", "Consolidación del diagnóstico y exportación del informe en Markdown."],
-        ["💡 Recomendaciones", "Quick wins y líneas preliminares para preparar la fase posterior."],
+        ["💡 Recomendaciones", "Quick wins y líneas de actuación derivadas del assessment."],
+        ["🧭 Modelo Objetivo", "Diseño de gobierno del dato objetivo por capacidades y roles."],
+        ["🎯 Estrategia del Dato", "Marco estratégico de ejecución con iniciativas núcleo y KPIs."],
+        ["🗺️ Roadmap", "Plan trimestral de implantación con hitos de control y prioridades."],
+        ["🏛️ Comité de Dirección", "Decisión ejecutiva, presupuesto y riesgos para activar la implantación."],
     ]
     st.table(section_data)
 
@@ -81,6 +112,10 @@ with st.sidebar:
             "⚖️ Priorización",
             "📋 Resumen Ejecutivo",
             "💡 Recomendaciones",
+            "🧭 Modelo Objetivo",
+            "🎯 Estrategia del Dato",
+            "🗺️ Roadmap",
+            "🏛️ Comité de Dirección",
         ],
     )
 
@@ -91,7 +126,7 @@ with st.sidebar:
         st.error("No se pudo cargar data/company_profile.json")
 
     st.markdown(
-        "<p style='font-size:0.8rem;'><i>Assessment inicial · base para propuesta de gobierno del dato</i></p>",
+        "<p style='font-size:0.8rem;'><i>Assessment inicial completado · base para propuesta de gobierno del dato</i></p>",
         unsafe_allow_html=True,
     )
 
@@ -109,3 +144,11 @@ elif page == "📋 Resumen Ejecutivo":
     exporter.render()
 elif page == "💡 Recomendaciones":
     recommendations.render()
+elif page == "🧭 Modelo Objetivo":
+    target_model.render()
+elif page == "🎯 Estrategia del Dato":
+    strategy.render()
+elif page == "🗺️ Roadmap":
+    roadmap.render()
+elif page == "🏛️ Comité de Dirección":
+    steering_committee.render()

@@ -2,10 +2,10 @@
 
 ## Herramienta de diagnóstico inicial para proyectos de gobierno del dato
 
-Esta aplicación está diseñada para la **fase de assessment inicial** en un proyecto de Data Governance.
-Su objetivo es diagnosticar la situación actual de una organización, descubrir problemas críticos y priorizar acciones.
+Esta aplicación está diseñada para simular un proyecto consultivo **end-to-end** de Data Governance.
+Incluye assessment inicial completo y la propuesta posterior de modelo objetivo, estrategia y roadmap.
 
-> Importante: esta herramienta **no** representa la solución final (modelo objetivo, estrategia completa ni roadmap definitivo).
+> Importante: la base del contenido proviene del assessment simulado de Inditex y está preparada como demo consultiva integral.
 
 ## ¿Qué hace y por qué existe?
 
@@ -15,7 +15,9 @@ Cuando un consultor entra por primera vez en una compañía, necesita construir 
 - Madurez actual de gestión del dato.
 - Hallazgos operativos, organizativos y tecnológicos.
 - Priorización de iniciativas por impacto y viabilidad.
-- Resumen ejecutivo exportable como base para la siguiente fase.
+- Resumen ejecutivo exportable en Markdown y PDF.
+- Diseño de modelo objetivo de gobierno del dato.
+- Estrategia de ejecución y roadmap trimestral.
 
 ## Instalación
 
@@ -29,7 +31,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Estructura funcional (7 secciones)
+## Estructura funcional (11 secciones)
 
 | Sección | Propósito |
 |---|---|
@@ -38,14 +40,18 @@ streamlit run app.py
 | 📊 Diagnóstico de Madurez | Evaluación de 6 dimensiones de gobierno del dato. |
 | 🔍 Hallazgos | Registro detallado de problemas identificados por el consultor. |
 | ⚖️ Priorización | Ranking de hallazgos según fórmula de impacto, urgencia, riesgo y esfuerzo. |
-| 📋 Resumen Ejecutivo | Vista consolidada y exportación en formato Markdown. |
+| 📋 Resumen Ejecutivo | Vista consolidada y exportación en formato Markdown/PDF. |
 | 💡 Recomendaciones | Quick wins y líneas preliminares de actuación. |
+| 🧭 Modelo Objetivo | Diseño objetivo de capacidades, roles y operating model de dato. |
+| 🎯 Estrategia del Dato | Objetivos estratégicos, líneas de acción y KPIs de éxito. |
+| 🗺️ Roadmap | Plan de implantación por trimestres con hitos y prioridades. |
+| 🏛️ Comité de Dirección | Decisión Go/No-Go, presupuesto estimado y riesgos de ejecución. |
 
 ## Encaje en el ciclo completo del proyecto
 
 **Assessment (esta herramienta) → Modelo Objetivo → Estrategia → Roadmap**
 
-Este repositorio cubre únicamente la primera fase: diagnóstico inicial y base de decisión.
+Este repositorio cubre todo el flujo anterior en una única aplicación de demostración.
 
 ## Uso con datos reales
 

@@ -10,10 +10,10 @@ def render() -> None:
     notes = load_json(data_path)
 
     st.title("💡 Recomendaciones")
-    st.caption("Síntesis preliminar de acciones sugeridas a partir del assessment inicial.")
+    st.caption("Síntesis consolidada de acciones sugeridas tras cerrar el assessment inicial.")
     st.warning(
-        "Estas recomendaciones son preliminares. La propuesta de modelo objetivo, "
-        "estrategia y roadmap se desarrolla en la fase posterior del proyecto."
+        "Estas recomendaciones cierran la fase de assessment. La propuesta detallada de modelo objetivo, "
+        "estrategia y roadmap se desarrolla en la siguiente fase del proyecto."
     )
     st.divider()
 

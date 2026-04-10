@@ -1,6 +1,9 @@
 import os
+from io import BytesIO
 
 import streamlit as st
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
 
 from src.utils import load_csv, load_json, maturity_level
 
@@ -19,6 +22,40 @@ def _priority_score(row) -> float:
     return (row["impacto"] * 0.35) + (row["urgencia"] * 0.35) + (row["riesgo"] * 0.20) - (row["esfuerzo"] * 0.10)
 
 
+def _safe_pdf_text(text: str) -> str:
+    return text.encode("latin-1", "ignore").decode("latin-1")
+
+
+def generate_pdf(markdown_text: str) -> bytes:
+    buffer = BytesIO()
+    pdf = canvas.Canvas(buffer, pagesize=A4)
+    width, height = A4
+    margin_x = 40
+    y = height - 40
+
+    lines = markdown_text.splitlines()
+    for line in lines:
+        clean = _safe_pdf_text(line.replace("#", "").replace("*", "").strip())
+        if not clean:
+            y -= 8
+        else:
+            max_chars = 110
+            chunks = [clean[i : i + max_chars] for i in range(0, len(clean), max_chars)]
+            for chunk in chunks:
+                if y < 40:
+                    pdf.showPage()
+                    y = height - 40
+                pdf.drawString(margin_x, y, chunk)
+                y -= 14
+
+        if y < 40:
+            pdf.showPage()
+            y = height - 40
+
+    pdf.save()
+    return buffer.getvalue()
+
+
 def generate_markdown(company, maturity, problems_df, notes) -> str:
     nombre = company.get("nombre", "Empresa sin nombre")
     company_rows = [
@@ -27,6 +64,10 @@ def generate_markdown(company, maturity, problems_df, notes) -> str:
         ("Tamaño", company.get("tamaño", "N/D")),
         ("Presencia geográfica", company.get("presencia_geografica", "N/D")),
         ("Nivel de digitalización", company.get("nivel_digitalizacion", "N/D")),
+        ("Tiendas FY2025", company.get("unidades_comerciales", "N/D")),
+        ("Ventas FY2025", company.get("ventas_fy2025", "N/D")),
+        ("Ventas online FY2025", company.get("ventas_online_fy2025", "N/D")),
+        ("Mercados", company.get("mercados", "N/D")),
         ("Sistemas relevantes", ", ".join(company.get("sistemas_relevantes", []))),
         ("Presión regulatoria", company.get("presion_regulatoria", "N/D")),
         ("Áreas de negocio", ", ".join(company.get("areas_negocio", []))),
@@ -78,18 +119,23 @@ def generate_markdown(company, maturity, problems_df, notes) -> str:
     lineas_actuacion = "\n".join([f"- {item}" for item in notes.get("lineas_actuacion", [])])
     dominios = ", ".join(notes.get("dominios_prioritarios", []))
 
+    company_table_rows = "\n".join([f"| {k} | {v} |" for k, v in company_rows])
+    maturity_table_rows = "\n".join(maturity_lines)
+    findings_table_rows = "\n".join(problems_rows)
+    top3_markdown = "\n\n".join(top3_sections)
+
     markdown = f"""# Assessment de Gobierno del Dato — {nombre}
 *Generado con Data Governance Assessment Tool*
 ---
 ## 1. Contexto de la Empresa
 | Campo | Valor |
 |---|---|
-{"\n".join([f"| {k} | {v} |" for k, v in company_rows])}
+{company_table_rows}
 
 ## 2. Diagnóstico de Madurez
 | Dimensión | Puntuación | Nivel | Observación |
 |---|---:|---|---|
-{"\n".join(maturity_lines)}
+{maturity_table_rows}
 
 **Puntuación global:** {global_score}/5  
 **Nivel global:** {global_level} ({global_desc})
@@ -97,10 +143,10 @@ def generate_markdown(company, maturity, problems_df, notes) -> str:
 ## 3. Hallazgos Detectados ({len(problems_df)} problemas)
 | Título | Área | Dominio | Impacto | Urgencia | Riesgo |
 |---|---|---|---:|---:|---:|
-{"\n".join(problems_rows)}
+{findings_table_rows}
 
 ## 4. Top 3 Problemas Priorizados
-{"\n\n".join(top3_sections)}
+{top3_markdown}
 
 ## 5. Notas del Consultor
 {notas_clave}
@@ -135,7 +181,7 @@ def render() -> None:
     notes = load_json(os.path.join(base_data, "assessment_notes.json"))
 
     st.title("📋 Resumen Ejecutivo")
-    st.caption("Vista consolidada del assessment y exportación en Markdown.")
+    st.caption("Entregable ejecutivo del assessment cerrado y exportación en Markdown.")
     st.divider()
 
     if not company or not maturity or problems_df.empty or not notes:
@@ -168,6 +214,14 @@ def render() -> None:
     st.download_button(
         "📥 Descargar resumen .md",
         data=markdown_string,
-        file_name="assessment_gobierono_dato.md",
+        file_name="assessment_gobierno_dato.md",
         mime="text/markdown",
+    )
+
+    pdf_bytes = generate_pdf(markdown_string)
+    st.download_button(
+        "📄 Descargar resumen .pdf",
+        data=pdf_bytes,
+        file_name="assessment_gobierno_dato.pdf",
+        mime="application/pdf",
     )

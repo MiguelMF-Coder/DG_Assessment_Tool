@@ -1,26 +1,26 @@
 {
   "estrategia_dato": {
     "score": 3,
-    "observacion": "Existe claridad sobre el rol del dato para el modelo omnicanal, pero no hay evidencia pública de una Data Strategy corporativa formal con principios, portfolio de data products ni KPIs de gobierno. Las iniciativas parecen impulsadas por necesidades operativas, no por una estrategia de dato explícita."
+    "observacion": "Existe una lógica de dato muy clara en el modelo omnicanal, pero no hay evidencia pública de una Data Strategy corporativa formal con principios, portfolio de data products ni KPIs de gobierno. El diagnóstico consultivo asume que las iniciativas están más guiadas por necesidades operativas y regulatorias que por una estrategia de dato explícita."
   },
   "organizacion_roles": {
     "score": 3,
-    "observacion": "Existen equipos de Big Data/Cloud y perfiles de reporting ESG. El marco de compliance incluye comité ético y DPO. Sin embargo, no hay evidencia pública de un CDO ni de un Data Governance Council formal con Data Owners y Stewards definidos por dominio."
+    "observacion": "Existen equipos de Big Data/Cloud, reporting ESG y un marco de compliance robusto con comité ético y DPO. Sin embargo, no hay evidencia pública de un CDO ni de un Data Governance Council formal con Data Owners y Stewards definidos por dominio."
   },
   "calidad_dato": {
     "score": 4,
-    "observacion": "El dominio de inventario muestra alta exigencia de precisión gracias a RFID/SINT. Sin embargo, la calidad puede ser desigual en dominios como ESG, proveedores o datos de cliente. No hay evidencia de un programa corporativo de calidad del dato con métricas formales."
+    "observacion": "El dominio de inventario muestra alta exigencia de precisión gracias a RFID/SINT y al entorno comercial único. Sin embargo, la calidad puede ser desigual en dominios como ESG, proveedores o datos de cliente. No hay evidencia pública de un programa corporativo de calidad del dato con métricas formales."
   },
   "uso_negocio": {
     "score": 4,
-    "observacion": "Alto uso del dato en operaciones omnicanal: 218M apps activas, 8.100M visitas online, integración tienda/ecommerce. El reto típico es homogeneizar definiciones y KPIs entre dominios y escalas analíticas avanzadas con control y gobierno."
+    "observacion": "Alto uso del dato en operaciones omnicanal: la evidencia pública muestra integración tienda/ecommerce, análisis en tiempo real y experiencias digitales de gran escala. El reto típico es homogeneizar definiciones y KPIs entre dominios y escalar analítica avanzada con control y gobierno."
   },
   "tecnologia_arquitectura": {
     "score": 4,
-    "observacion": "Infraestructura operacional muy sólida (RFID, SINT, plataforma cloud/Big Data). El salto pendiente es incorporar componentes de gobernanza modernos: catálogo de datos, linaje, observabilidad y MDM a escala enterprise para todos los dominios críticos."
+    "observacion": "Infraestructura operacional muy sólida (RFID, SINT, Inditex Open Platform, big data/cloud y event bus). El salto pendiente es incorporar componentes de gobernanza modernos: catálogo de datos, linaje, observabilidad y MDM a escala enterprise para todos los dominios críticos."
   },
   "gobierno_control": {
     "score": 4,
-    "observacion": "Marco de compliance fuerte: políticas de privacidad, seguridad de la información, canal ético y gestión de riesgos. El gap es extender ese rigor de control al gobierno de datos de negocio (inventario, producto, ESG) con el mismo nivel de formalización."
+    "observacion": "Marco de compliance fuerte: políticas de privacidad, seguridad de la información, canal ético y gestión de riesgos. El gap es extender ese rigor de control al gobierno de datos de negocio (inventario, producto, ESG y cliente) con el mismo nivel de formalización."
   }
 }

@@ -12,7 +12,8 @@ def render() -> None:
     maturity = load_json(data_path)
 
     st.title("📊 Diagnóstico de Madurez")
-    st.caption("Evaluación del estado actual de la gestión del dato en dimensiones clave.")
+    st.caption("Resultado consolidado de la evaluación del estado actual de la gestión del dato.")
+    st.info("Diagnóstico base ya cerrado para Inditex. Puedes activar simulación para explorar escenarios.")
     st.divider()
 
     if not maturity:
@@ -29,11 +30,16 @@ def render() -> None:
     }
 
     scores: dict[str, float] = {}
+    simulate_mode = st.toggle("Activar simulación de escenarios", value=False)
 
     st.subheader("Puntuación por dimensión")
     for key, label in dimensions.items():
         default = float(maturity.get(key, {}).get("score", 1))
-        scores[key] = st.slider(label, 1.0, 5.0, default, 0.5)
+        if simulate_mode:
+            scores[key] = st.slider(label, 1.0, 5.0, default, 0.5)
+        else:
+            scores[key] = default
+            st.write(f"**{label}:** {default}/5")
 
     st.divider()
 
